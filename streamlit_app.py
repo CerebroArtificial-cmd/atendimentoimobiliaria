@@ -3,6 +3,11 @@
 # Requisitos: streamlit, python-dotenv, pandas, openpyxl (para salvar .xlsx)
 # pip install streamlit python-dotenv pandas openpyxl
 #
+# app.py — Ayla (Atendente de Imobiliária) no padrão "Streamlit AI assistant"
+# ---------------------------------------------------------------------------
+# Requisitos: streamlit, python-dotenv, pandas, openpyxl (para salvar .xlsx)
+# pip install streamlit python-dotenv pandas openpyxl
+#
 # Variáveis de ambiente (.env):
 #   OPENAI_API_KEY=...         (opcional; não é usado neste fluxo, mas deixado pronto)
 #   COMPANY_NAME=Imobiliária XYZ
@@ -15,6 +20,11 @@ from collections import namedtuple
 
 import pandas as pd
 import streamlit as st
+import pandas as pd
+import openai
+
+# Carregar variáveis de ambiente
+load_dotenv()
 
 # -----------------------------------------------------------------------------
 # Configuração básica (padrão do demo)
@@ -301,3 +311,4 @@ if user_message:
 
 # Rodapé pequeno (como no demo há links/avisos)
 st.caption(f"💼 {COMPANY_NAME} • {COMPANY_BLURB} • 📄 Leads em: `{LEADS_PATH}`")
+
